@@ -1,0 +1,269 @@
+/* EXTERNAL / STYLE_GUIDE */
+:root{
+    --Red: hsl(0, 100%, 74%); 
+    --Green: hsl(154, 59%, 51%);
+    --Blue: hsl(248, 32%, 49%);
+    --DarkBlue: hsl(249, 10%, 26%);
+    --GrayishBlue: hsl(246, 25%, 77%);
+ 
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+/*
+    font-family: 'Poppins', sans-serif;
+    Weights: 400, 500, 600, 700
+*/
+
+/* GENERAL */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+body {
+    background-color: hsl(0, 100%, 74%);
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    padding: 0 11%;
+    gap: 7%;
+    background: url(images/bg-intro-desktop.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+    .attribution a { 
+        color: hsl(228, 45%, 44%); 
+    }
+/* SPECIFY */
+
+    /* LEFT CONTENT START*/
+    .text-contain {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+        .text-contain h1 {
+            font-size: 52px;
+            margin-bottom: 30px;
+        }
+        .text-contain p {
+            max-width: 470px;
+            font-size: 16px;
+            font-weight: 500;
+        }
+    /* LEFT CONTENT END */
+
+    /* RIGTH CONTENT START */
+    .rigth {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 25px;
+    }
+        /* UP / OFFER */
+        .rigth .offer {
+            width: 540px;
+            height: 60px;
+            border-radius: 15px;
+            border: none;
+            background: hsl(228, 45%, 44%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 8px 0 rgba(0, 0, 0, 0.158);
+        }
+            .rigth .offer span {
+                font-weight: 600;
+                padding-right: 5px;
+            }
+
+        /* FORM CONTENT */
+        .rigth form {
+            width: 540px;
+            min-height: 475px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow:0px 10px 0px 0px rgba(0,0,0,0.10);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            color: black;
+            padding: 40px 0;
+        }
+        .rigth form input{
+            width: 460px;
+            border-radius: 8px;
+            padding-left: 30px;
+            border: 1px solid var(--GrayishBlue);
+            outline: none;
+            color: black;
+        }
+            .rigth form input::placeholder{
+                font-weight: 600;
+            }
+        .rigth form .form-control{
+            position: relative;
+        }
+         
+            .rigth form .form-control small{
+                position: absolute;
+                color: var(--Red);
+                top: 60px;
+                right: 25px;
+            }
+            .rigth form .form-control i{
+                position: absolute;
+                top: 22px;
+                right: 20px;
+                visibility: hidden;
+            }
+        
+            /*--error--*/
+            .rigth form .form-control.error input{
+                border-color:red;
+            }
+        
+            .rigth form .form-control.error i{
+                visibility: visible;
+            }
+            /*--success--*/
+            .rigth form .form-control.success input{
+                border-color: var(--GrayishBlue);
+            }
+            .rigth form .form-control.success small{
+                visibility: hidden;
+            }
+            #button2{
+                background-color: var(--Green);
+                color: white;
+                font-weight: 600;
+            }
+            span{
+                font-weight: 600;
+            }
+        
+            .formSign{
+                width: 90%;
+                height: 50px;
+                margin: 10px 0px 10px 0px;
+            }
+            #clicking{
+                color: var(--GrayishBlue);
+                font-size: 12px;
+                margin-right: 1.5rem;
+                margin-left: 1.5rem;
+                font-weight: 400;
+            }
+            #clicking span{
+            color: var(--Red);
+            }
+
+            .form button{
+                border-radius: 10px;
+                width: 460px;
+                height: 50px;
+                border: none;
+            }
+    /* RIGTH CONTENT END */
+
+@media (max-width: 1024px) {
+    /* GENERAL */
+    main {
+        height: 140vh;
+        flex-direction: column;
+        padding: 0;
+        gap: 7%;
+        background: url(images/bg-intro-desktop.png);
+        background-position: center;
+        background-size: cover;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-bottom: 20px;
+        padding: 11%;
+    }
+
+     /* LEFT CONTENT START*/
+     .text-contain {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+        .text-contain h1 {
+            max-width: 326px;
+            font-size: 40px;
+            margin-bottom: 30px;
+            margin-top: 30px;
+        }
+        .text-contain p {
+            max-width: 280px;
+            font-size: 16px;
+            font-weight: 500;
+        }
+    /* LEFT CONTENT END */
+
+    /* RIGTH CONTENT START */
+    .rigth {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 25px;
+    }
+        /* UP / OFFER */
+        .rigth .offer {
+            width: 326px;
+            height: 86px;
+            padding: 0 75px;
+            text-align: center;
+            justify-content: center;
+        }
+        /* FORM CONTENT */
+        .rigth .form {
+            width: 326px;
+            min-height: 442px;
+            padding: 24px;
+        }
+            .rigth .form div {
+                display: flex;
+                flex-direction: column;
+            }
+                .rigth .form div input {
+                    width: 277px;
+                }
+                    .rigth .form div input:focus {
+                        border: 2px solid hsl(228, 45%, 44%);
+                    }
+            .rigth .form button {
+                width: 277px;
+                font-size: 15px;
+            }
+            .rigth .form .terms {
+                max-width: 232px;
+                text-align: center;
+                color: hsl(246, 25%, 77%);
+                font-size: 12px;
+            }
+                .rigth .form .terms span {
+                    color: hsl(0, 100%, 74%);
+                    font-weight: 600;
+                    cursor: pointer;
+                }
+    /* RIGTH CONTENT END */
+    footer {
+        display: none;
+        visibility: hidden;
+    }
+}
